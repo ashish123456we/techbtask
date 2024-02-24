@@ -1,0 +1,19 @@
+{% extends 'base.html ' %}
+
+{% block title %}
+    <title>DELETE CONFIRMATION </title>
+{% enblock %}
+
+</head>
+<body>
+    <centre><h1><u> DELETE CONFIRMATION </u></h1></centre>
+    <form method="post">
+        {% csrf_token %}
+        <h3> Do you really want to delete <span style="color:red">{{obj.laptop_id}}</span> Record? </h3>
+        <input type="submit" value="YES">
+        <a href="{% url 'retrivr_url'%}"><input type='button' value='NO'></a>
+
+    </form>
+        <centre
+</body>
+</html>
